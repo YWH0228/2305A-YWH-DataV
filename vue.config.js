@@ -4,18 +4,18 @@ const { defineConfig } = require("@vue/cli-service")
 // }
 module.exports = defineConfig({
   transpileDependencies: true,
-  lintOnSave: false,
-  devServer: {
-    proxy: {
-      [process.env.VUE_APP_BASE_API]: {
-        target: process.env.VUE_APP_BASE_URL,
-        changeOrigin: true,
-        pathRewrite: {
-          ["^" + process.env.VUE_APP_BASE_API]: ""
-        }
-      }
-    }
-  }
+  lintOnSave: false
+  // devServer: {
+  //   proxy: {
+  //     [process.env.VUE_APP_BASE_API]: {
+  //       target: process.env.VUE_APP_BASE_URL,
+  //       changeOrigin: true,
+  //       pathRewrite: {
+  //         ["^" + process.env.VUE_APP_BASE_API]: ""
+  //       }
+  //     }
+  //   }
+  // }
   // chainWebpack(config) {
   //   config.plugins.delete("prefetch")
   //   config.module.rule("svg").exclude.add(resolve("src/icons")).end()
