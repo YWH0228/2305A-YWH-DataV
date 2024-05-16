@@ -19,87 +19,145 @@ export default {
     var myChart = echarts.init(chartDom)
     var option
 
+    // 图表渲染参数开始
     option = {
       tooltip: {
         trigger: "item",
-        formatter: "{b}:({d}%)"
+        // formatter: "{b} : {d}%"
+        formatter: function (a) {
+          var c = a.name
+          var d = c.split(":")
+          return d[0] + " : " + a.percent + "%"
+        }
       },
       legend: [
         {
-          top: "center",
+          icon: "square",
           orient: "vertical",
-          right: "10%",
-          itemWidth: 5,
-          itemHeight: 5,
-          icon: "circle",
-          itemGap: 10,
+          left: "left",
+          top: "center",
+          itemGap: 18,
+          padding: 15,
           textStyle: {
-            color: "#4E5969",
-            fontSize: 10,
-            padding: [0, 0, 0, 10]
+            color: "#fff",
+            padding: [0, 0, 0, -5]
           },
-          data: ["优质土壤", "一般土壤", "差质土壤", "贫瘠土壤", "其他土壤", "不可使用土壤"]
+          data: ["警: 90", "自危害: 120", "攻击入侵: 110"]
+          // data: dataResult.name[0]
+        },
+        {
+          icon: "square",
+          orient: "vertical",
+          left: "right",
+          top: "center",
+          itemGap: 18,
+          padding: 15,
+          textStyle: {
+            color: "#fff",
+            padding: [0, -100, 0, -60]
+          },
+          data: ["安全预警: 150", "信息刺探: 70", "恶意代码: 60"]
+          // data: dataResult.name[1]
         }
       ],
       grid: {
-        containLabel: true
-      },
-      title: {
-        textStyle: {
-          rich: {
-            a: {
-              fontSize: 14,
-              color: "#1D2129"
-            }
-          }
-        },
-        subtextStyle: {
-          rich: {
-            a: {
-              fontSize: 14,
-              color: "#1D2129",
-              padding: [0, 0, 0, 7]
-            }
-          }
-        },
-        x: "37%",
-        y: "46%"
+        right: 100
       },
       series: [
         {
           type: "pie",
           radius: ["40%", "60%"],
-          center: ["40%", "50%"],
-          color: ["#86DF6C", "#249EFF", "#0E42D2", "#846BCE", "#21CCFF", "#3a27bc"],
+          center: ["50%", "50%"],
+
           label: {
-            position: "outside",
-            show: true,
-            color: "#4E5969",
-            fontSize: 16,
-            formatter: function (params) {
-              if (params.name !== "") {
-                return params.percent + "%"
-              }
+            normal: {
+              show: false
             }
           },
           labelLine: {
-            show: true,
-            length2: 30,
-            length: 10
-          },
-          itemStyle: {
             normal: {
-              borderWidth: 2
+              show: false,
+              length2: 10
             }
           },
           data: [
-            { value: "44", name: "优质土壤" },
-            { value: "48", name: "一般土壤" },
-            { value: "24", name: "差质土壤" },
-            { value: "16", name: "贫瘠土壤" },
-            { value: "12", name: "其他土壤" },
-            { value: "2", name: "不可使用土壤" }
-          ]
+            {
+              value: 90,
+              // value: dataResult.value[3],
+              name: "警" + ": " + 90,
+              // name: dataResult.name[0][3],
+              itemStyle: {
+                normal: {
+                  color: "#ffff00"
+                }
+              }
+            },
+            {
+              value: 120,
+              // value: dataResult.value[4],
+              name: "自危害" + ": " + 120,
+              // name: dataResult.name[0][4],
+              itemStyle: {
+                normal: {
+                  color: "#ff0000"
+                }
+              }
+            },
+
+            {
+              value: 110,
+              // value: dataResult.value[5],
+              name: "攻击入侵" + ": " + 110,
+              // name: dataResult.name[0][5],
+              itemStyle: {
+                normal: {
+                  color: "#ff1a40"
+                }
+              }
+            },
+
+            {
+              value: 150,
+              // value: dataResult.value[9],
+              name: "安全预警" + ": " + 150,
+              // name: dataResult.name[1][3],
+              itemStyle: {
+                normal: {
+                  color: "#0000ff"
+                }
+              }
+            },
+
+            {
+              value: 70,
+              // value: dataResult.value[10],
+              name: "信息刺探" + ": " + 70,
+              // name: dataResult.name[1][4],
+              itemStyle: {
+                normal: {
+                  color: "#de3d1c"
+                }
+              }
+            },
+            {
+              value: 60,
+              // value: dataResult.value[11],
+              name: "恶意代码" + ": " + 60,
+              // name: dataResult.name[1][5],
+              itemStyle: {
+                normal: {
+                  color: "#4ec968"
+                }
+              }
+            }
+          ],
+          itemStyle: {
+            emphasis: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: "rgba(0, 0, 0, 0.5)"
+            }
+          }
         }
       ]
     }
