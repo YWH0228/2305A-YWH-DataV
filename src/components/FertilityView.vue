@@ -4,7 +4,7 @@
       <img src="../assets/imgs/weather.png" alt="" />
       <div class="title-name">土壤肥力分析</div>
     </div>
-    <div id="main" style="width: 100%; height: 138px"></div>
+    <div id="main" style="width: 100%; height: 10rem"></div>
   </div>
 </template>
 
@@ -173,11 +173,11 @@ export default {
   height: 100%;
   .title {
     width: 100%;
-    height: 40px;
+    height: 2.4rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.12rem solid #3f5d53;
     img {
       width: 1.5rem;
       height: 1.5rem;

@@ -63,11 +63,11 @@
   height: 100%;
   .title {
     width: 100%;
-    height: 50px;
+    height: 3rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.12rem solid #3f5d53;
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -80,7 +80,7 @@
   }
   .content {
     width: 100%;
-    padding: 10px 20px;
+    padding: 0.6rem 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,7 +91,7 @@
 
       .item {
         width: 33%;
-        height: 170px;
+        height: 11.4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -102,8 +102,8 @@
           background-size: 100% 100%;
           display: flex;
           justify-content: center;
-          padding: 33px 0 0 0;
-          font-size: 24px;
+          padding: 2rem 0 0 0;
+          font-size: 1.3rem;
         }
         .top-item-num1 {
           background-image: url("../assets/imgs/组3299@3x.png");
@@ -121,8 +121,8 @@
     }
     .centers {
       width: 60%;
-      height: 1px;
-      margin-top: 10px;
+      height: 0.06rem;
+      margin-top: 0.6rem;
       background: linear-gradient(
         to right,
         rgba(173, 173, 173, 0.1) 0%,
@@ -132,7 +132,7 @@
     }
     .bottom {
       width: 100%;
-      height: 108px;
+      height: 6.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -143,12 +143,12 @@
         justify-content: center;
         align-items: center;
         .bottom-left-item {
-          width: 140px;
-          height: 50px;
+          width: 7.6rem;
+          height: 3rem;
           background-image: url("../assets/imgs/Rectangle605@3x.png");
           background-size: 100% 100%;
           text-align: center;
-          line-height: 50px;
+          line-height: 3rem;
           color: #ba3939;
           font-weight: bolder;
         }
@@ -166,8 +166,8 @@
           .items {
             display: flex;
             .name {
-              margin-right: 10px;
-              font-size: 16px;
+              margin-right: 0.6rem;
+              font-size: 0.96rem;
               color: #fff;
             }
             .num {

@@ -21,19 +21,19 @@
 .role-view {
   width: 100%;
   height: 100%;
-  padding: 10px 30px;
+  padding: 0.6rem 2rem;
   display: flex;
   justify-content: space-between;
   .role-item {
-    width: 100px;
+    width: 6rem;
     height: 100%;
     .num {
       width: 100%;
-      height: 50px;
+      height: 3rem;
       display: flex;
       align-items: center;
       justify-content: right;
-      padding: 5px 20px 0 0;
+      padding: 0.03rem 1.2rem 0 0;
       color: #6d8b7f;
       font-weight: bolder;
       background-size: 100% 100%;
@@ -51,8 +51,8 @@
       width: 100%;
       text-align: center;
       color: #dcf6f1;
-      font-size: 14px;
-      margin-top: 5px;
+      font-size: 0.76rem;
+      margin-top: 0.3rem;
     }
   }
 }

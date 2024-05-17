@@ -1,13 +1,14 @@
 <template>
   <dv-full-screen-container class="index">
+    <!-- <dv-loading v-if="loadFlag">Loading...</dv-loading> -->
     <dv-border-box-6>
       <div class="title">
-        <dv-decoration-8 style="width: 400px; height: 50px" />
+        <dv-decoration-8 style="width: 28rem; height: 3.5rem" />
         <div class="title-name">
           <div class="name">百香果数字运营中心</div>
-          <dv-decoration-5 style="width: 300px; height: 40px" />
+          <dv-decoration-5 style="width: 20rem; height: 2.5rem" />
         </div>
-        <dv-decoration-8 :reverse="true" style="width: 400px; height: 50px" />
+        <dv-decoration-8 :reverse="true" style="width: 28rem; height: 3.5rem" />
       </div>
       <div class="content">
         <div class="item"><outline></outline></div>
@@ -129,7 +130,8 @@ export default {
       a: 0,
       b: 0,
       c: 0,
-      d: 0
+      d: 0,
+      loadFlag: true
     }
   },
   methods: {
@@ -172,6 +174,11 @@ export default {
     massif,
     role,
     harvest
+  },
+  created() {
+    setTimeout(() => {
+      this.loadFlag = false
+    }, 2000)
   }
 }
 </script>
@@ -194,9 +201,9 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 0.4rem;
       .name {
-        font-size: 32px;
+        font-size: 1.64rem;
         color: #fff;
         font-weight: bolder;
       }
@@ -204,13 +211,13 @@ export default {
   }
   .content {
     width: 100%;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 3rem);
     box-sizing: border-box;
-    padding: 0 10px 10px 10px;
+    padding: 0 0.8rem 0.8rem 0.8rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    grid-gap: 5px;
+    grid-gap: 0.6rem;
     grid-template:
       "a b b c" 1fr
       "a b b e" 1fr
@@ -225,8 +232,8 @@ export default {
     .item:nth-of-type(1) {
       grid-area: a;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.4rem;
     }
     .item:nth-of-type(2) {
       grid-area: b;
@@ -234,11 +241,11 @@ export default {
       position: relative;
       //地块位置样式
       .ite {
-        width: 80px;
-        height: 120px;
+        width: 5rem;
+        height: 7rem;
         img {
           width: 100%;
-          height: 60px;
+          height: 3.6rem;
         }
         .item-contents {
           width: 100%;
@@ -252,43 +259,43 @@ export default {
       // 地块位置定位
       .ite1 {
         position: absolute;
-        left: 240px;
-        top: 70px;
+        left: 15.5rem;
+        top: 5rem;
       }
       .ite2 {
         position: absolute;
-        left: 376px;
-        top: 191px;
+        left: 23.5rem;
+        top: 10rem;
       }
       .ite3 {
         position: absolute;
-        left: 430px;
-        bottom: 130px;
+        left: 27rem;
+        bottom: 6rem;
       }
       .ite4 {
         position: absolute;
-        right: 270px;
-        bottom: 130px;
+        right: 16rem;
+        bottom: 8.5rem;
       }
 
       //地块详情栏样式
       .detail {
-        width: 250px;
-        height: 200px;
-        border: 2px solid #537368;
-        border-radius: 10px;
+        width: 16rem;
+        height: 12.5rem;
+        border: 0.16rem solid #537368;
+        border-radius: 0.6rem;
         background-color: #0e1d18ce;
         .titles {
           width: 100%;
-          height: 50px;
-          padding: 5px 10px;
-          border-bottom: 2px solid #3f5d53;
+          height: 3rem;
+          padding: 0.3rem 0.6rem;
+          border-bottom: 0.16rem solid #3f5d53;
           display: flex;
           align-items: center;
           img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 0.4rem;
           }
           .titles-content {
             color: #ca9b00;
@@ -298,8 +305,8 @@ export default {
         }
         .bottom {
           width: 100%;
-          height: calc(200px - 50px);
-          padding: 10px 15px;
+          height: calc(12.5rem - 3rem);
+          padding: 0.6rem 0.9rem;
           .images {
             height: 75%;
             display: flex;
@@ -324,72 +331,72 @@ export default {
 
       .detail1 {
         position: absolute;
-        left: 50px;
-        top: 180px;
+        left: 3rem;
+        top: 12rem;
       }
       .detail2 {
         position: absolute;
-        left: 460px;
-        top: 150px;
+        left: 30rem;
+        top: 9rem;
       }
       .detail3 {
         position: absolute;
-        bottom: 100px;
-        left: 160px;
+        bottom: 4rem;
+        left: 10rem;
       }
       .detail4 {
         position: absolute;
-        bottom: 10px;
-        right: 20px;
+        bottom: 0.8rem;
+        right: 0rem;
       }
     }
     .item:nth-of-type(3) {
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(4) {
       grid-area: d;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(5) {
       grid-area: e;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(6) {
       grid-area: f;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     /*害虫灾害预警*/
     .item:nth-of-type(7) {
       grid-area: g;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(8) {
       grid-area: h;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(9) {
       grid-area: j;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
     .item:nth-of-type(10) {
       grid-area: i;
       background-color: #0a2218a8;
-      border: 2px solid #537368;
-      border-radius: 10px;
+      border: 0.16rem solid #537368;
+      border-radius: 0.6rem;
     }
   }
 }

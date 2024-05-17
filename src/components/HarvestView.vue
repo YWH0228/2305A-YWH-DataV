@@ -61,12 +61,12 @@ export default {
   height: 100%;
   .title {
     width: 100%;
-    height: 50px;
+    height: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.12rem solid #3f5d53;
     .left {
       display: flex;
       img {
@@ -82,20 +82,20 @@ export default {
     }
     .right {
       .bts1 {
-        width: 60px;
-        height: 30px;
-        border-radius: 14px 0 0 14px;
-        border: 2px solid #3e6254;
+        width: 3.6rem;
+        height: 1.8rem;
+        border-radius: 0.76rem 0 0 0.75rem;
+        border: 0.12rem solid #3e6254;
         background-color: #214134c9;
         color: #92a59d;
         font-weight: bolder;
         border-right: none;
       }
       .bts2 {
-        width: 60px;
-        height: 30px;
-        border-radius: 0 14px 14px 0;
-        border: 2px solid #3e6254;
+        width: 3.6rem;
+        height: 1.8rem;
+        border-radius: 0 0.76rem 0.76rem 0;
+        border: 0.12rem solid #3e6254;
         background-color: #214134c9;
         border-left: none;
         color: #92a59d;
@@ -105,7 +105,7 @@ export default {
   }
   .content {
     width: 100%;
-    padding: 10px 20px;
+    padding: 0.6rem 1.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -128,8 +128,8 @@ export default {
     }
     .line {
       width: 60%;
-      height: 1px;
-      margin: 10px 0;
+      height: 0.06rem;
+      margin: 0.6rem 0;
       background: linear-gradient(
         to right,
         rgba(173, 173, 173, 0.1) 0%,
@@ -141,6 +141,6 @@ export default {
 }
 .active {
   color: #d6981b !important;
-  border: 2px solid #af7d19 !important;
+  border: 0.12rem solid #af7d19 !important;
 }
 </style>

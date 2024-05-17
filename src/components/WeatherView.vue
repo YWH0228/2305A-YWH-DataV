@@ -20,7 +20,7 @@
           <template v-slot="scope">
             <div class="temperature">
               <div class="weathers">{{ scope.row.Temperature[0] }} ℃</div>
-              <el-slider v-model="scope.row.Temperature" range show-stops :max="40" style="width: 80px" disabled>
+              <el-slider v-model="scope.row.Temperature" range show-stops :max="40" style="width: 5rem" disabled>
               </el-slider>
               <div class="weathers">{{ scope.row.Temperature[1] }} ℃</div>
             </div>
@@ -92,11 +92,11 @@ export default {
 
   .title {
     width: 100%;
-    height: 50px;
+    height: 3rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.16rem solid #3f5d53;
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -108,14 +108,14 @@ export default {
     }
   }
   .main {
-    height: calc(100% - 50px);
+    height: calc(100% - 3rem);
     .weather-icon {
       display: flex;
       align-items: center;
       img {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-right: 0.3rem;
       }
     }
     .temperature {
@@ -136,13 +136,13 @@ export default {
   background-color: transparent !important; /* 使用 !important 来确保样式被应用 */
 }
 :deep .el-table .cell {
-  line-height: 18px;
+  line-height: 1.2rem;
 }
 :deep .el-table {
   height: 100%;
 }
 :deep .el-table .el-table__cell {
-  padding: 5px 0;
+  padding: 0.3rem 0;
 }
 ::v-deep .el-table::after {
   border: none !important;
@@ -155,7 +155,7 @@ export default {
   background-color: #fae20a !important; /* 绿色轨道 */
 }
 .weathers {
-  width: 100px;
+  width: 6rem;
   text-align: center;
 }
 ::v-deep .el-slider__button-wrapper {
@@ -163,5 +163,10 @@ export default {
 }
 ::v-deep .el-slider__stop {
   background-color: #3f5d53a6 !important;
+}
+::v-deep .el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+  background-color: #00000000;
 }
 </style>

@@ -67,11 +67,11 @@
   height: 100%;
   .title {
     width: 100%;
-    height: 50px;
+    height: 3rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.06rem solid #3f5d53;
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -88,10 +88,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 0;
+    padding: 0.3rem 0;
     .roleNum {
       width: 100%;
-      padding: 10px 20px;
+      padding: 0.6rem 1.2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -100,14 +100,14 @@
         img {
           width: 3rem;
           height: 3rem;
-          margin: 0 10px;
+          margin: 0 0.6rem;
         }
         .roleNum-item-num {
           .top {
             color: #fff;
             font-weight: bolder;
             text-align: center;
-            margin-bottom: 2px;
+            margin-bottom: 0.12rem;
           }
           .bottom {
             color: #edb32b;
@@ -124,8 +124,8 @@
     }
     .line {
       width: 60%;
-      height: 1px;
-      margin-top: 10px;
+      height: 0.06rem;
+      margin-top: 0.6rem;
       background: linear-gradient(
         to right,
         rgba(173, 173, 173, 0.1) 0%,
@@ -135,18 +135,18 @@
     }
     .imgNum {
       width: 100%;
-      height: 150px;
-      padding: 10px 20px;
+      height: 9rem;
+      padding: 0.6rem 1.2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 10px;
+      margin-top: 0.6rem;
       .left {
         width: 40%;
         height: 100%;
         background-image: url("../assets/imgs/Group625.png");
         background-size: 150% 200%;
-        background-position: -42px -45px;
+        background-position: 2.6rem 3rem;
         display: flex;
         justify-content: center;
         .title-num {
@@ -156,7 +156,7 @@
           text-align: center;
           color: #ffd710;
           font-weight: bolder;
-          margin-top: 5px;
+          margin-top: 0.3rem;
         }
       }
       .right {

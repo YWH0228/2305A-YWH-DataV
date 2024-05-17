@@ -32,11 +32,11 @@ export default {
   height: 100%;
   .title {
     width: 100%;
-    height: 40px;
+    height: 2.4rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border-bottom: 2px solid #3f5d53;
+    border-bottom: 0.12rem solid #3f5d53;
     img {
       width: 1.5rem;
       height: 1.5rem;
@@ -49,23 +49,24 @@ export default {
   }
   .content {
     width: 100%;
-    height: 138px;
+    height: 7.5rem;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0.6rem;
     .left {
       width: 45%;
       height: 100%;
-      padding: 10px 20px;
+      padding: 0.6rem 1.8rem;
       img {
         width: 100%;
         height: 100%;
+        margin-top: 1rem;
       }
     }
     .center {
-      width: 1px;
+      width: 0.06rem;
       height: 60%;
-      margin-top: 10px;
+      margin-top: 0.6rem;
       background: linear-gradient(
         to bottom,
         rgba(173, 173, 173, 0.1) 0%,
@@ -76,9 +77,9 @@ export default {
     .right {
       width: 55%;
       height: 100%;
-      font-size: 12px;
+      font-size: 0.72rem;
       color: #fff;
-      padding: 0 20px;
+      padding: 0 1.2rem;
     }
   }
 }
